@@ -2,6 +2,7 @@ package view
 
 import (
 	"html/template"
+	"io"
 	"net/http"
 	"regexp"
 )
@@ -19,4 +20,8 @@ func Render(w http.ResponseWriter, tmpl string, page Page) {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
+}
+
+func Write(w http.ResponseWriter, data string) {
+	io.WriteString(w, data)
 }

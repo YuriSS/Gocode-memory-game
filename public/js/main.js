@@ -1,3 +1,7 @@
-(function() {
-    console.log("FUCKEYATamo na main");
+game['start'] = (function() {
+
+    'use strict'
+
+    var card = game.card().init();
+
 })();

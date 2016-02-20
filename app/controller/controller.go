@@ -1,31 +1,27 @@
 package controller
 
 import (
-	"github.com/YuriSS/memory_game/app/view"
+	"github.com/YuriSS/memory_game/app/routes"
+	"github.com/YuriSS/memory_game/app/stage"
 	"net/http"
 )
 
-type Router struct {
+type Middleware struct {
 	api_prefix string
 }
 
-func (router *Router) Raises_Routes() {
-	router.api_prefix = "/api/"
+var scene = stage.Scene{}
+var router = routes.Route{}
 
-	http.HandleFunc("/", make_handler(index_handler))
-	http.HandleFunc("/static/", make_handler(static_files))
+func (middleware *Middleware) Raises_Routes() {
+	middleware.api_prefix = "/api/"
+
+	http.HandleFunc("/", router.Make_Handler(router.Index_Handler))
+	http.HandleFunc("/static/", router.Make_Handler(router.Static_Files))
+
+	http.HandleFunc(middleware.api_prefix+"move/", router.Make_Handler(router.Move))
 }
 
-func make_handler(fn func(http.ResponseWriter, *http.Request)) http.HandlerFunc {
-	return func(writer http.ResponseWriter, request *http.Request) {
-		fn(writer, request)
-	}
-}
-
-func static_files(writer http.ResponseWriter, request *http.Request) {
-	http.ServeFile(writer, request, request.URL.Path[1:])
-}
-
-func index_handler(writer http.ResponseWriter, request *http.Request) {
-	view.Render(writer, "index", view.Page{"Jogo da Memória"})
+func (router *Middleware) Start_Game() {
+	scene.New_Scene()
 }

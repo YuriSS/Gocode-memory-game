@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>{{.Title}}</title>
     <link rel="stylesheet" href="/static/css/main.css">
+    <script>
+        var game = {};
+    </script>
 </head>
 <body>
     <section class="container">
@@ -11,7 +14,7 @@
             <h1>{{.Title}}</h1>
         </div>
 
-        <ul class="stage">
+        <ul class="stage" id="stage">
             <li class="col-xs-3"><img src="/static/images/card_back.jpg"></li>
             <li class="col-xs-3"><img src="/static/images/card_back.jpg"></li>
             <li class="col-xs-3"><img src="/static/images/card_back.jpg"></li>

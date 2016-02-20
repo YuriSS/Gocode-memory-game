@@ -14,7 +14,8 @@ var config = struct {
 
 func main() {
 	fmt.Println("Server running on port %d...", config.port)
-	controller := controller.Router{}
+	controller := controller.Middleware{}
 	controller.Raises_Routes()
+	controller.Start_Game()
 	panic(http.ListenAndServe(config.port, nil))
 }
