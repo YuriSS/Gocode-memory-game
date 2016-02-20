@@ -1,0 +1,22 @@
+{
+  "name": "memory_game",
+  "authors": [
+    "YuriSS <yuri.s.dos.santos@gmail.com>"
+  ],
+  "description": "",
+  "main": "main.go",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.0",
+    "bootstrap-sass": "~3.3.6"
+  }
+}

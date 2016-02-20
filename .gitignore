@@ -1,32 +1,4 @@
-
-# Created by https://www.gitignore.io/api/go,vim,sass,sublimetext,node,linux
-
-### Go ###
-# Compiled Object files, Static and Dynamic libs (Shared Objects)
-*.o
-*.a
-*.so
-
-# Folders
-_obj
-_test
-
-# Architecture specific extensions/prefixes
-*.[568vq]
-[568vq].out
-
-*.cgo1.go
-*.cgo2.c
-_cgo_defun.c
-_cgo_gotypes.go
-_cgo_export.*
-
-_testmain.go
-
-*.exe
-*.test
-*.prof
-
+#Created by https://www.gitignore.io/api/vim,linux,sublimetext,node,go,bower,sass
 
 ### Vim ###
 [._]*.s[a-w][a-z]
@@ -37,9 +9,17 @@ Session.vim
 *~
 
 
-### Sass ###
-.sass-cache/
-*.css.map
+### Linux ###
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
 
 
 ### SublimeText ###
@@ -95,15 +75,42 @@ node_modules
 .node_repl_history
 
 
-### Linux ###
-*~
+### Go ###
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
 
-# temporary files which can be created if a process still has a handle open of a deleted file
-.fuse_hidden*
+# Folders
+_obj
+_test
 
-# KDE directory preferences
-.directory
+# Architecture specific extensions/prefixes
+*.[568vq]
+[568vq].out
 
-# Linux trash folder which might appear on any partition or disk
-.Trash-*
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
+
+_testmain.go
+
+*.exe
+*.test
+*.prof
+
+
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
+public/vendor
+
+
+### Sass ###
+.sass-cache/
+*.css.map
 
