@@ -5816,3 +5816,11 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+.stage {
+  list-style: none; }
+  .stage li {
+    margin-bottom: 10px; }
+    .stage li img {
+      width: 100%;
+      height: 240px; }
