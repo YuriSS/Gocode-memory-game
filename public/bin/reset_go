@@ -1,0 +1,4 @@
+pkill memory_game
+cd $GOPATH/src/github.com/YuriSS/memory_game
+go install
+memory_game&

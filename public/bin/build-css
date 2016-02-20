@@ -1,0 +1,2 @@
+cd $GOPATH/src/github.com/YuriSS/memory_game/public
+node-sass --include-path scss sass/main.scss ../static/css/main.css

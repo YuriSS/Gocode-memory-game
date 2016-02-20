@@ -16,5 +16,5 @@ func main() {
 	fmt.Println("Server running on port %d...", config.port)
 	controller := controller.Router{}
 	controller.Raises_Routes()
-	http.ListenAndServe(config.port, nil)
+	panic(http.ListenAndServe(config.port, nil))
 }
