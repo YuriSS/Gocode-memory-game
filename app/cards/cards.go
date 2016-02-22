@@ -6,10 +6,10 @@ import (
 )
 
 var card_images = [4]string{
-	"images/card_1.jpg",
-	"images/card_2.jpg",
-	"images/card_3.jpg",
-	"images/card_4.jpg",
+	"/static/images/card_1.jpg",
+	"/static/images/card_2.jpg",
+	"/static/images/card_3.jpg",
+	"/static/images/card_4.jpg",
 }
 
 type Deck struct {
